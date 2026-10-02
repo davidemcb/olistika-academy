@@ -217,19 +217,35 @@
       </ul>
     </div>
     <form class="form" id="modulo-contatto">
-      <h3>Scrivici in un minuto</h3>
-      <label for="nome">Come ti chiami</label>
-      <input id="nome" name="nome" type="text" autocomplete="given-name" required>
-      <label for="interesse">Cosa ti interessa</label>
-      <select id="interesse" name="interesse">
+      <h3>Lasciaci i tuoi dati</h3>
+      <p class="form-sub">Ti ricontatta Manuela, di persona.</p>
+      <div class="campi">
+        <label for="nome">Nome e cognome</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" required>
+        <div class="row2">
+          <div>
+            <label for="telefono">Telefono</label>
+            <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+          </div>
+          <div>
+            <label for="email">Email (facoltativa)</label>
+            <input id="email" name="email" type="email" autocomplete="email">
+          </div>
+        </div>
+        <label for="interesse">Cosa ti interessa</label>
+        <select id="interesse" name="interesse">
         <option>il corso di massaggio</option>
         <option>il biennio per Operatore Olistico</option>
         <option>non lo so ancora, vorrei un consiglio</option>
       </select>
-      <label for="messaggio">Vuoi aggiungere qualcosa? (facoltativo)</label>
-      <textarea id="messaggio" name="messaggio" rows="3"></textarea>
-      <button class="btn btn-wa" type="submit">Invia su WhatsApp</button>
-      <p class="note">Il modulo apre WhatsApp con il messaggio già scritto: lo invii tu, dal tuo telefono. Questo sito non conserva i tuoi dati. <a href="privacy.html">Informativa privacy</a></p>
+        <label for="messaggio">Vuoi aggiungere qualcosa? (facoltativo)</label>
+        <textarea id="messaggio" name="messaggio" rows="3"></textarea>
+        <input class="hp" type="text" name="sito_web" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label class="consenso"><input type="checkbox" name="consenso" required> <span>Ho letto l'<a href="privacy.html">informativa privacy</a> e acconsento a essere ricontattata o ricontattato.</span></label>
+        <button class="btn btn-primary" type="submit">Invia la richiesta</button>
+        <button class="btn-link via-wa" type="button">Preferisci WhatsApp? Scrivici da qui</button>
+      </div>
+      <p class="form-esito" role="status" hidden></p>
     </form>
   </div>
 </section>

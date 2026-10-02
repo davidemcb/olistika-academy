@@ -193,8 +193,17 @@ blockquote footer { font-size: .95rem; color: var(--muted); font-weight: 600; }
   width: 100%; padding: 13px 14px; border: 1px solid #d9c6b6; border-radius: 10px; font: inherit; font-size: 1rem; background: #fff; color: var(--ink);
 }
 .form input:focus, .form select:focus, .form textarea:focus { outline: 2px solid var(--plum); outline-offset: 1px; border-color: var(--plum); }
-.form .btn { width: 100%; margin-top: 20px; }
-.form .note { font-size: .8rem; color: var(--muted); margin: 12px 0 0; }
+.form .btn { width: 100%; margin-top: 18px; }
+.form h3 { margin-bottom: .15em; }
+.form .form-sub { color: var(--muted); font-size: .95rem; margin: 0; }
+.form .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+.form .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form label.consenso { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: .86rem; color: var(--muted); margin-top: 16px; line-height: 1.45; }
+.form label.consenso input { width: 18px; height: 18px; margin: 2px 0 0; flex: none; accent-color: var(--plum); }
+.form .btn-link { display: block; width: 100%; margin-top: 12px; background: none; border: 0; padding: 6px; font: inherit; font-size: .92rem; font-weight: 700; color: var(--wa); cursor: pointer; text-decoration: underline; }
+.form .form-esito { margin: 14px 0 0; padding: 14px 16px; border-radius: 10px; background: #f6ece4; color: var(--plum-dark); font-weight: 700; }
+.form.inviato .campi { display: none; }
+.form.inviato .form-esito { background: #e8f3ec; color: #17603a; font-size: 1.05rem; }
 
 /* Banda CTA */
 .cta-band { text-align: center; background: var(--rose); }
@@ -275,6 +284,7 @@ blockquote footer { font-size: .95rem; color: var(--muted); font-weight: 600; }
   .cal .who { text-align: left; }
   .site-footer .wrap { grid-template-columns: 1fr; }
   .btn-row .btn { width: 100%; }
+  .form .row2 { grid-template-columns: 1fr; }
   .sticky-cta {
     display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; gap: 10px;
     padding: 10px 12px calc(10px + env(safe-area-inset-bottom)); background: rgba(250, 244, 238, .97);
